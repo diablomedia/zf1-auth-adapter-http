@@ -1,5 +1,4 @@
 parameters:
-    checkMissingIterableValueType: false
     level: 7
     paths:
         - ./
@@ -8,5 +7,11 @@ parameters:
         - %rootDir%/../../../tests/*
     ignoreErrors:
         -
-            message: '#Offset .path. does not exist on array{scheme\?: string, host\?: string, port\?: int<0, 65535>, user\?: string, pass\?: string, path\?: string, query\?: string, fragment\?: string}\.#'
+            identifier: missingType.iterableValue
+        -
+            message: '#Offset .path. might not exist on array{scheme\?: string, host\?: string, port\?: int<0, 65535>, user\?: string, pass\?: string, path\?: string, query\?: string, fragment\?: string}\.#'
             path: %currentWorkingDirectory%/src/Zend/Auth/Adapter/Http.php
+        -
+            message: '#Offset 1 on array{non-falsy-string, non-falsy-string} in empty\(\) always exists and is not falsy\.#'
+            count: 1
+            path: 'src/Zend/Auth/Adapter/Http.php'
