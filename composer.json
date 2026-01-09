@@ -12,9 +12,9 @@
     "require": {
         "ext-ctype": "*",
         "ext-hash": "*",
-        "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
-        "diablomedia/zendframework1-controller": "^1.0.6",
-        "diablomedia/zendframework1-auth": "^1.0.5"
+        "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
+        "diablomedia/zendframework1-controller": "dev-php-85 as 1.0.6",
+        "diablomedia/zendframework1-auth": "dev-php-85 as 1.0.5"
     },
     "autoload": {
         "psr-0": {
@@ -51,5 +51,6 @@
         "allow-plugins": {
             "phpro/grumphp-shim": true
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
